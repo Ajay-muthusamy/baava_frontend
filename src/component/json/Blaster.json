@@ -1,0 +1,24 @@
+[
+    
+    {
+        "image":"",
+        "title":"1K",
+        "price":100.00
+    },
+    {
+        "image":"",
+        "title":"2k",
+        "price":200.00
+    },
+    {
+        "image":"",
+        "title":"5k",
+        "price":500.00
+    },
+    {
+        "image":"",
+        "title":"10 K",
+        "price":1000.00
+    }
+
+]
