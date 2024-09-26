@@ -32,8 +32,10 @@ import PremiumUniqueSparklers from "../json/PremiumUniqueSparklers.json";
 import MatchBox from "../json/MatchBox.json";
 import PremiumRocket from "../json/PremiumRocket.json";
 import WhistlingShot from "../json/WhistlingShots.json";
+import { useNavigate } from "react-router-dom";
 
 const ProductList = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [Offer, setOffer] = useState(null);
 
@@ -41,7 +43,7 @@ const ProductList = () => {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "http://localhost:1234/user/update-data"
+          "https://baava-backend-new-1.onrender.com/user/update-data"
         );
         setOffer(response.data);
       } catch (error) {

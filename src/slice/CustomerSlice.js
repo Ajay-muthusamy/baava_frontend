@@ -8,7 +8,7 @@ const initialState = {
 
 export const addcustomerDetails = async(customerdata) =>{
     try {
-        const response = axios.post('http://localhost:1234/user/data',customerdata);
+        const response = axios.post("https://baava-backend-new-1.onrender.com/user/data",customerdata);
         console.log(customerdata);
         return response.data;
     } catch (error) {
