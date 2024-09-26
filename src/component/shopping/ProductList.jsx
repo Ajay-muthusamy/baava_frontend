@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { addProducts } from "../../slice/CustomerSlice";
 import { addcustomerDetails } from "../../slice/CustomerSlice.js";
@@ -301,12 +303,14 @@ const ProductList = () => {
       const customerData = await addcustomerDetails(CutomerDetails);
       dispatch(addProducts(customerData));
       console.log(CutomerDetails);
+      toast.success("Your Order Placed...");
+      setTimeout(() => navigate("/quick-shopping"), 3000);
       setShowModal(false);
     }
   };
   return (
     <div>
-      <div className=" sticky top-0 bg-white z-10 pb-2">
+      <div className=" sticky top-0 bg-white  pb-2">
         <section className="grid grid-cols-2 md:grid-cols-3 gap-4 m-5 text-center font-semibold">
           <div className="hidden md:block border-2 p-5 rounded-md">
             Number of Products
@@ -314,20 +318,19 @@ const ProductList = () => {
               {Object.values(products).flat().length}
             </div>
           </div>
-          
-            <div className=" border-2 p-5 rounded-md">
-              Number of items
-              <div className="border-t-2 mt-2 text-center text-2xl">
-                {totalItems}
-              </div>
+
+          <div className=" border-2 p-5 rounded-md">
+            Number of items
+            <div className="border-t-2 mt-2 text-center text-2xl">
+              {totalItems}
             </div>
-            <div className="border-2 p-5 rounded-md">
-              Total Amount
-              <div className="border-t-2 mt-2 text-center text-2xl">
-                Rs: {totalAmount} .00
-              </div>
+          </div>
+          <div className="border-2 p-5 rounded-md">
+            Total Amount
+            <div className="border-t-2 mt-2 text-center text-2xl">
+              Rs: {totalAmount} .00
             </div>
-          
+          </div>
         </section>
         <div className="block md:hidden">
           <div className="flex justify-center">
@@ -1815,7 +1818,7 @@ const ProductList = () => {
         </table>
 
         <section>
-          <div className="flex flex-col sticky top-32 z-10 m-2 ">
+          <div className="flex flex-col sticky ">
             <button
               className={`text-white font-sans p-3 rounded-lg mb-5 text-1xl ${
                 totalItems === 0
@@ -1965,6 +1968,7 @@ const ProductList = () => {
           </div>
         </section>
       </div>
+      <ToastContainer/>
     </div>
   );
 };

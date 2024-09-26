@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-[rgb(248,240,240)] w-[45vh] p-5 rounded-lg flex justify-center">
+      {/* <div className="bg-[rgb(248,240,240)] w-[45vh] p-5 rounded-lg flex justify-center">
         <div className="font-poppins">
           <div className="border-b-2 mb-2">
             <h1 className="bg-yellow-300 w-40 p-1 rounded-lg"> BAAVA CRACKERS</h1>
@@ -70,7 +70,7 @@ const Home = () => {
             
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
