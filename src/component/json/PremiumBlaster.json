@@ -1,24 +1,24 @@
 [
     
     {
-        "image":"",
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
         "title":"1K",
-        "price":250.00
+        "price":280.00
     },
     {
-        "image":"",
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
         "title":"2k",
-        "price":500.00
+        "price":560.00
     },
     {
-        "image":"",
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
         "title":"5k",
-        "price":1100.00
+        "price":1250.00
     },
     {
-        "image":"",
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
         "title":"10 K",
-        "price":2200.00
+        "price":2500.00
     }
 
 ]
