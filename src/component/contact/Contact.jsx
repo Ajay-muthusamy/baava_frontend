@@ -14,12 +14,12 @@ const Contact = () => {
         <div className="flex justify-center">
           <div className="md:w-[70%]">
             <iframe
-              style={{ borderRadius: "10px" }}
               width="100%"
               height="400"
-              src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Maharani%20nagar,%20madurai,%20Vadipatti,%20Tamil%20Nadu%20625218+(Baava%20crackers)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              title="Baava Crackers Location"
-            ></iframe>
+              src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Baava%20crackers,Maharani%20nagar,%20madurai,%20Vadipatti,%20Tamil%20Nadu%20625218+(Baava%20crackers)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            >
+              <a href="https://www.gps.ie/">gps vehicle tracker</a>
+            </iframe>
           </div>
         </div>
 
