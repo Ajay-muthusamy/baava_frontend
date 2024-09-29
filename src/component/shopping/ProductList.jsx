@@ -351,7 +351,7 @@ const ProductList = () => {
               disabled={totalItems === 0}
               onClick={() => setShowModal(true)}
             >
-              Register Now
+              Order Now
             </button>
           </div>
         </div>
@@ -1889,10 +1889,10 @@ const ProductList = () => {
               disabled={totalItems === 0}
               onClick={() => setShowModal(true)}
             >
-              Register Now
+              Order Now
             </button>
             <p className="font-bold text-center mt-5 ">
-              Click the "Register Now" button to place your order.
+              Click the "Order Now" button to place your order.
             </p>
 
             <div className="py-10 w-[55vh]">
