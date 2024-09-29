@@ -15,11 +15,6 @@
         "price":72.00
     },
     {
-        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723283368.jpg",
-        "title":"Snow Flakes",
-        "price":194.00
-    },
-    {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723283446.jpg",
         "title":"Magic peacock",
         "price":149.00
@@ -101,11 +96,6 @@
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723288313.jpg",
         "title":"Original pops",
         "price":430.00
-    },
-    {
-        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"Sizzler",
-        "price":145.00
     }
 
 ]
