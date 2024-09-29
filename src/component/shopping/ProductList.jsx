@@ -319,6 +319,7 @@ const ProductList = () => {
   return (
     <div>
       <div className=" sticky top-0 bg-white  pb-2">
+          <marquee behavior="" direction="" className="font-poppins text-1xl mt-4">Diwali Mega Offer,Admin Logajith,Quick Shopping</marquee>
         <section className="grid grid-cols-2 md:grid-cols-3 gap-4 m-5 text-center font-semibold">
           <div className="hidden md:block border-2 p-5 rounded-md">
             Number of Products
