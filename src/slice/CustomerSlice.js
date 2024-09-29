@@ -5,7 +5,7 @@ const initialState = {
     
     products:[]
 }
-
+// 
 export const addcustomerDetails = async(customerdata) =>{
     try {
         const response = axios.post("https://baava-backend-new-1.onrender.com/user/data",customerdata);
