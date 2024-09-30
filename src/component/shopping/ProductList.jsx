@@ -389,7 +389,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -442,7 +442,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-5 py-2">
                   {data.title}
                   <h2 className="md:hidden  font-bold text-blue-600">
-                    Rs: {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -497,7 +497,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -549,7 +549,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -603,7 +603,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -657,7 +657,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -711,7 +711,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -761,7 +761,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -815,7 +815,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -869,7 +869,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -923,7 +923,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -977,7 +977,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1031,7 +1031,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1085,7 +1085,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1139,7 +1139,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1193,7 +1193,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1247,7 +1247,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1309,7 +1309,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1363,7 +1363,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1417,7 +1417,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1470,7 +1470,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1520,7 +1520,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1570,7 +1570,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1624,7 +1624,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1678,7 +1678,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1736,7 +1736,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1788,7 +1788,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1842,7 +1842,7 @@ const ProductList = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                    {data.price}
+                  ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
