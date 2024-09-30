@@ -44,7 +44,6 @@ const Nabar = () => {
           <ul className="flex flex-col space-y-4">
             <li><Link to="/" >HOME</Link></li>
             <li><Link to="/about" onClick={toggleMenu}>ABOUT US</Link></li>
-            <li><Link to="/categories" onClick={toggleMenu}>CATEGORIES</Link></li>
             <li><Link to="/quick-shopping" onClick={toggleMenu}>QUICK SHOPPING</Link></li>
             <li><Link to="/contact" onClick={toggleMenu}>CONTACT US</Link></li>
           </ul>
