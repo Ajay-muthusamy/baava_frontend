@@ -39,6 +39,7 @@ const ProductList = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [Offer, setOffer] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -305,6 +306,14 @@ const ProductList = () => {
     updatedata,
     formData,
   };
+  const handleImageClick = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -319,7 +328,7 @@ const ProductList = () => {
   return (
     <div>
       <div className=" sticky top-0 bg-white  pb-2">
-          {/* <marquee behavior="" direction="" className="font-poppins text-1xl mt-4">Diwali Mega Offer,Admin Logajith,Quick Shopping</marquee> */}
+        {/* <marquee behavior="" direction="" className="font-poppins text-1xl mt-4">Diwali Mega Offer,Admin Logajith,Quick Shopping</marquee> */}
         <section className="grid grid-cols-2 md:grid-cols-3 gap-4 m-5 text-center font-semibold">
           <div className="hidden md:block border-2 p-5 rounded-md">
             Number of Products
@@ -384,6 +393,7 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
@@ -399,9 +409,7 @@ const ProductList = () => {
                   <div className="flex justify-center items-center space-x-4">
                     <button
                       className="text-3xl font-bold px-3 py-1 transition"
-                      onClick={() =>
-                        handleQuantityChange("Bijili", index, -1)
-                      }
+                      onClick={() => handleQuantityChange("Bijili", index, -1)}
                     >
                       -
                     </button>
@@ -410,9 +418,7 @@ const ProductList = () => {
 
                     <button
                       className="text-3xl font-bold px-1 py-1 transition"
-                      onClick={() =>
-                        handleQuantityChange("Bijili", index, 1)
-                      }
+                      onClick={() => handleQuantityChange("Bijili", index, 1)}
                     >
                       +
                     </button>
@@ -423,6 +429,7 @@ const ProductList = () => {
                 </td>
               </tr>
             ))}
+          
             <tr>
               <td colSpan="5" className=" font-bold text-lg p-4 text-left ">
                 <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
@@ -437,12 +444,13 @@ const ProductList = () => {
                     src={data.img}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.img)}
                   />
                 </td>
                 <td className="border border-gray-300 px-5 py-2">
                   {data.title}
                   <h2 className="md:hidden  font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -478,13 +486,6 @@ const ProductList = () => {
               </tr>
             ))}
 
-            <tr>
-              <td colSpan="5" className=" font-bold text-lg  text-left p-4">
-                <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
-                  One Sound
-                </span>
-              </td>
-            </tr>
             {products.oneSound.map((data, index) => (
               <tr key={index} className="bg-gray-50 hover:bg-gray-100">
                 <td className="border border-gray-300 px-4 py-2">
@@ -492,12 +493,13 @@ const ProductList = () => {
                     src={data.img}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -544,12 +546,13 @@ const ProductList = () => {
                     src={data.img}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.img)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -598,12 +601,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -652,12 +656,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -706,12 +711,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -756,12 +762,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -810,12 +817,13 @@ const ProductList = () => {
                     src={data.img}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.img)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -864,12 +872,13 @@ const ProductList = () => {
                     src={data.img}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.img)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -918,12 +927,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.img)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -969,15 +979,16 @@ const ProductList = () => {
               <tr key={index} className="bg-gray-50 hover:bg-gray-100">
                 <td className="border border-gray-300 px-4 py-2">
                   <img
-                    src={data.image}
+                    src={data.img}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.img)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1026,12 +1037,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1080,12 +1092,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1134,12 +1147,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1188,12 +1202,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1242,12 +1257,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1304,12 +1320,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1358,12 +1375,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1412,12 +1430,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1465,12 +1484,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1515,12 +1535,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1565,12 +1586,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1619,12 +1641,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1673,12 +1696,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1731,12 +1755,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1783,12 +1808,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1837,12 +1863,13 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {data.title}
                   <h2 className="md:hidden px-4 py-2 font-bold text-blue-600">
-                  ₹ {data.price}
+                    ₹ {data.price}
                   </h2>
                 </td>
                 <td className="hidden md:block border border-gray-300 px-4 py-5 font-bold text-blue-600">
@@ -1922,6 +1949,27 @@ const ProductList = () => {
                 </p>
               )}
             </div>
+            {selectedProduct && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className="bg-white rounded-lg shadow-lg p-6 w-3/4 md:w-1/2 lg:w-1/3">
+                  <div className="flex justify-between items-center mb-4">
+                    
+                    
+                  </div>
+                  <img
+                    src={selectedProduct}
+                    alt="Product"
+                    className="w-full h-80 object-cover mb-4"
+                  />
+                  <button
+                      className="bg-red-700 text-white px-3 py-2 rounded-lg hover:text-red-500"
+                      onClick={closeModal}
+                    >
+                      close
+                    </button>
+                </div>
+              </div>
+            )}
 
             {showModal && (
               <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
@@ -2028,6 +2076,7 @@ const ProductList = () => {
               </div>
             )}
           </div>
+          <div></div>
         </section>
       </div>
       <ToastContainer />
