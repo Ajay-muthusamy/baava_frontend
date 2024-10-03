@@ -306,8 +306,9 @@ const ProductList = () => {
     updatedata,
     formData,
   };
-  const handleImageClick = (product) => {
+  const handleImageClick = (product,title) => {
     setSelectedProduct(product);
+    console.log(title)
   };
 
   const closeModal = () => {
@@ -393,7 +394,7 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
-                    onClick={() => handleImageClick(data.image)}
+                    onClick={() => handleImageClick(data.image,data.title)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
@@ -2049,7 +2050,7 @@ const ProductList = () => {
                       )}
                     </div>
                     <p className="text-red-800 mb-5">
-                      "Note: The minimum order amount is ₹2500."
+                      "Note: The minimum order amount is ₹3000."
                     </p>
                     <div className="flex justify-end">
                       <button
@@ -2062,11 +2063,11 @@ const ProductList = () => {
                       <button
                         type="submit"
                         className={`px-4 py-2 text-white rounded-lg ${
-                          totalAmount < 2500
+                          totalAmount < 3000
                             ? "bg-red-800 cursor-not-allowed"
                             : "bg-sky-950"
                         }`}
-                        disabled={totalAmount < 2500}
+                        disabled={totalAmount < 3000}
                       >
                         Submit
                       </button>
