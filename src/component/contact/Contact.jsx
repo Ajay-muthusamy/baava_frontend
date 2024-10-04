@@ -1,5 +1,6 @@
 import React from "react";
 import { FaMapLocationDot } from "react-icons/fa6";
+import logo from '../../assets/IMG-20241004-WA0004.jpg'
 
 const Contact = () => {
   return (
@@ -69,6 +70,9 @@ const Contact = () => {
           </div>
         </div>
       </main>
+      <div className="hidden">
+        <img src={logo} alt="" />
+      </div>
     </div>
   );
 };
