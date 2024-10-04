@@ -70,7 +70,7 @@ const Contact = () => {
           </div>
         </div>
       </main>
-      <div className="">
+      <div className="hidden">
         <img src={logo} alt="" />
       </div>
     </div>
