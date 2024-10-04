@@ -928,7 +928,7 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
-                    onClick={() => handleImageClick(data.img)}
+                    onClick={() => handleImageClick(data.image)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
