@@ -1844,7 +1844,7 @@ const ProductList = () => {
                   <img
                     src={selectedProduct}
                     alt="Product"
-                    className="w-full h-80 object-cover mb-4"
+                    className="w-full h-96 object-cover mb-4"
                   />
                   <button
                     className="bg-red-700 text-white px-3 py-2 rounded-lg hover:text-red-500"
