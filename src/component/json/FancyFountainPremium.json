@@ -25,28 +25,11 @@
         "price":130.00
     },
     {
-        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723284564.jpg",
-        "title":"Dora singer",
-        "price":145.00
-    }
-    ,
-    {
-        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723284619.jpg",
-        "title":"Mottu patlu",
-        "price":230.00
-    }
-    ,
-    {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723284706.jpg",
         "title":"Flames",
         "price":110.00
     }
     ,
-    {
-        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723284839.jpg",
-        "title":"utsav",
-        "price":330.00
-    },
     {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723284995.jpg",
         "title":"Miracle pots",
@@ -61,11 +44,6 @@
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723285224.jpg",
         "title":"Try colour",
         "price":230.00
-    },
-    {
-        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723287414.jpg",
-        "title":"Alice",
-        "price":135.00
     },
     {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723287471.jpg",
@@ -96,6 +74,25 @@
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723288313.jpg",
         "title":"Original pops",
         "price":430.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"snow flakes",
+        "price":199.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Colour Flash",
+        "price":169.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Try Colour",
+        "price":249.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Lion King",
+        "price":429.00
     }
-
 ]

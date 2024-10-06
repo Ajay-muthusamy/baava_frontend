@@ -5,11 +5,6 @@
         "price":239.00
     },
     {
-        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723278467.jpg",
-        "title":"Smoke 5 pcs",
-        "price":220.00
-    },
-    {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723278621.jpg",
         "title":"Sivakasi slp",
         "price":187.00
@@ -20,8 +15,33 @@
         "price":260.00
     },
     {
-        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723288735.jpg",
-        "title":"Mighty Thor",
-        "price":130.00
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Thor",
+        "price":170.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Might Thor",
+        "price":599.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Master Blaster",
+        "price":175.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Pop corn Pencil",
+        "price":180.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Olympic torch colour smoke",
+        "price":210.00
+    },
+    {
+        "image":"https://ih0.redbubble.net/image.195569273.8857/flat,800x800,075,f.u2.jpg",
+        "title":"Magic lamp smoke spcs",
+        "price":270.00
     }
 ]
