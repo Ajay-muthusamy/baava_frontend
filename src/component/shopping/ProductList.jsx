@@ -195,7 +195,7 @@ const ProductList = () => {
       ...product,
       quantity: 0,
       subtotal: 0,
-    }))
+    })),
   });
   const validateForm = () => {
     const errors = {};
@@ -294,9 +294,9 @@ const ProductList = () => {
     updatedata,
     formData,
   };
-  const handleImageClick = (product,title) => {
+  const handleImageClick = (product, title) => {
     setSelectedProduct(product);
-    console.log(title)
+    console.log(title);
   };
 
   const closeModal = () => {
@@ -382,7 +382,7 @@ const ProductList = () => {
                     src={data.image}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
-                    onClick={() => handleImageClick(data.image,data.title)}
+                    onClick={() => handleImageClick(data.image, data.title)}
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
@@ -418,7 +418,7 @@ const ProductList = () => {
                 </td>
               </tr>
             ))}
-          
+
             <tr>
               <td colSpan="5" className=" font-bold text-lg p-4 text-left ">
                 <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
@@ -482,7 +482,6 @@ const ProductList = () => {
                     src={data.img}
                     alt="Product"
                     className="w-12 h-12 object-cover mx-auto"
-                    
                   />
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
@@ -1782,8 +1781,6 @@ const ProductList = () => {
                 </td>
               </tr>
             ))}
-
-           
           </tbody>
         </table>
 
@@ -1831,23 +1828,22 @@ const ProductList = () => {
               )}
             </div>
             {selectedProduct && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                <div className="bg-white rounded-lg shadow-lg p-6 w-3/4 md:w-1/2 lg:w-1/3">
-                  <div className="flex justify-between items-center mb-4">
-                    
-                    
-                  </div>
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+              onClick={closeModal} >
+                <div className="bg-white rounded-lg shadow-lg p-6 w-3/4 md:w-1/2 lg:w-1/3"
+                   >
+                  <div className="flex justify-between items-center mb-4"></div>
                   <img
                     src={selectedProduct}
                     alt="Product"
                     className="w-full h-80 object-cover mb-4"
                   />
                   <button
-                      className="bg-red-700 text-white px-3 py-2 rounded-lg hover:text-red-500"
-                      onClick={closeModal}
-                    >
-                      close
-                    </button>
+                    className="bg-red-700 text-white px-3 py-2 rounded-lg hover:text-red-500"
+                    onClick={closeModal}
+                  >
+                    close
+                  </button>
                 </div>
               </div>
             )}
