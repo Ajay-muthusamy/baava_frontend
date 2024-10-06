@@ -474,6 +474,13 @@ const ProductList = () => {
                 </td>
               </tr>
             ))}
+            <tr>
+              <td colSpan="5" className=" font-bold text-lg p-4 text-left ">
+                <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
+                  One Sound
+                </span>
+              </td>
+            </tr>
 
             {products.oneSound.map((data, index) => (
               <tr key={index} className="bg-gray-50 hover:bg-gray-100">
@@ -1828,10 +1835,11 @@ const ProductList = () => {
               )}
             </div>
             {selectedProduct && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-              onClick={closeModal} >
-                <div className="bg-white rounded-lg shadow-lg p-6 w-3/4 md:w-1/2 lg:w-1/3"
-                   >
+              <div
+                className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                onClick={closeModal}
+              >
+                <div className="bg-white rounded-lg shadow-lg p-6 w-3/4 md:w-1/2 lg:w-1/3">
                   <div className="flex justify-between items-center mb-4"></div>
                   <img
                     src={selectedProduct}
