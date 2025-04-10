@@ -212,6 +212,7 @@ const ProductList = () => {
     return Object.keys(errors).length === 0;
   };
   const [selectedProducts, setSelectedProducts] = useState([]);
+  // console.log(selectedProducts)
   const totalItems = Object.values(products)
     .flat()
     .reduce((sum, product) => sum + product.quantity, 0);
@@ -227,6 +228,7 @@ const ProductList = () => {
   useEffect(() => {
     setupdatedata({ products: selectedProducts, totalAmount });
   }, [totalAmount, selectedProducts]);
+
   const handleQuantityChange = (section, index, delta) => {
     setProducts((prevProducts) => {
       return {
@@ -292,7 +294,6 @@ const ProductList = () => {
   };
   const CutomerDetails = {
     updatedata,
-    formData,
   };
   const handleImageClick = (product, title) => {
     setSelectedProduct(product);
@@ -314,6 +315,9 @@ const ProductList = () => {
       setShowModal(false);
     }
   };
+
+
+  console.log(CutomerDetails)
   return (
     <div>
       <div className=" sticky top-0 bg-white  pb-2">
@@ -348,7 +352,7 @@ const ProductList = () => {
                   : "bg-sky-950"
               }`}
               disabled={totalItems === 0}
-              onClick={() => setShowModal(true)}
+              onClick={() => navigate("/cart")}
             >
               Order Now
             </button>
@@ -1800,7 +1804,7 @@ const ProductList = () => {
                   : "bg-sky-950"
               }`}
               disabled={totalItems === 0}
-              onClick={() => setShowModal(true)}
+              onClick={() => navigate("/cart", {state: { array: updatedata.products } } )}
             >
               Order Now
             </button>
@@ -1856,7 +1860,7 @@ const ProductList = () => {
               </div>
             )}
 
-            {showModal && (
+            {/* {showModal && (
               <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
                 <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
                   <h2 className="text-2xl font-bold mb-4">
@@ -1959,7 +1963,7 @@ const ProductList = () => {
                   </form>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
           <div></div>
         </section>
