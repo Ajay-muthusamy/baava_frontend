@@ -12,22 +12,22 @@ const Cart = () => {
         <h1 className="font-poppins font-semibold text-xl">Items in Cart</h1>
       </div>
       <div className="flex justify-around items-center pt-8">
-        <table className="inline-table w-full">
+        <table className="min-w-[60vw] table-auto border rounded-lg shadow-lg">
           <thead className="">
             <tr>
-              <th>Title</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Sub-Total</th>
+              <th className="text-lg bg-gray-200 py-3">Title</th>
+              <th className="text-lg bg-gray-200 py-3">Price</th>
+              <th className="text-lg bg-gray-200 py-3">Quantity</th>
+              <th className="text-lg bg-gray-200 py-3">Sub-Total</th>
             </tr>
           </thead>
           <tbody>
             {selecteditems.map((cart, index) => (
               <tr key={index} className="text-center mt-5">
-                <td>{cart.title}</td>
-                <td>{cart.price}</td>
-                <td>{cart.quantity}</td>
-                <td>{cart.subtotal}</td>
+                <td className="p-4 text-md font-kanit">{cart.title}</td>
+                <td className="p-4 text-md font-kanit">{cart.price}</td>
+                <td className="p-4 text-md font-kanit">{cart.quantity}</td>
+                <td className="p-4 text-md font-kanit">{cart.subtotal}</td>
               </tr>
             ))}
           </tbody>
