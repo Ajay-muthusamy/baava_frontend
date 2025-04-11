@@ -1804,7 +1804,7 @@ const ProductList = () => {
                   : "bg-sky-950"
               }`}
               disabled={totalItems === 0}
-              onClick={() => navigate("/cart", {state: { array: updatedata.products } } )}
+              onClick={() => navigate("/cart", {state: { array: updatedata.products, total:updatedata.totalAmount} } )}
             >
               Proceed to Checkout
             </button>
