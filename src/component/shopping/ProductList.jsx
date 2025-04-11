@@ -1806,7 +1806,7 @@ const ProductList = () => {
               disabled={totalItems === 0}
               onClick={() => navigate("/cart", {state: { array: updatedata.products } } )}
             >
-              Order Now
+              Proceed to Checkout
             </button>
             <p className="font-bold text-center mt-5 ">
               Click the "Order Now" button to place your order.

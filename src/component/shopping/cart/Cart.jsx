@@ -1,10 +1,12 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const location = useLocation();
   const selecteditems = location.state.array || {};
   console.log(selecteditems);
+  const navigate=useNavigate();
 
   return (
     <div>
@@ -32,6 +34,9 @@ const Cart = () => {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="w-full flex justify-center items-center py-14">
+        <button className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg" onClick={()=>navigate("/payment")}>Order Now</button>
       </div>
     </div>
   );
