@@ -4,6 +4,11 @@ import freeship from "../../animeFiles/Animation - 1727158563881.json";
 import mapVdp from "../../assets/Screenshot (620).png";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useNavigate } from "react-router-dom";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import Paybutton from "../button/Paybutton";
+
+const stripePromise = loadStripe('pk_test_51RCYB84RJ1mSwy621eKV4VepjMxs72NRZDV9uYYn1YPegxGHSQinGEnAX3aZjeWlO2Yij9lF7WmAXCUtYzdzh2oW00uNXHyo66');
 
 const Home = () => {
   const navigate = useNavigate();
@@ -71,6 +76,13 @@ const Home = () => {
           </div>
         </div>
       </div> */}
+
+      <Elements stripe={stripePromise}>
+        <div style={{ padding: 40 }}>
+          <h2>Buy a Cool Product - $15</h2>
+          <Paybutton />
+        </div>
+      </Elements>
     </div>
   );
 };
