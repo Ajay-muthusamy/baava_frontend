@@ -38,7 +38,7 @@ const Home = () => {
       </div>
       <div className="flex justify-center">
         <button
-          className="bg-gradient-to-r from-teal-400 to-blue-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:from-teal-500 hover:to-blue-600"
+          className="bg-gradient-to-r from-teal-400 to-blue-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-110 hover:from-teal-500 hover:to-blue-600"
           onClick={() => navigate("/quick-shopping")}
         >
           Purchase Now
