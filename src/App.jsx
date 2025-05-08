@@ -5,7 +5,7 @@ import Footer from "./component/footer/Footer";
 import About from "./component/about/About";
 import Home from "./component/home/Home";
 import Contact from "./component/contact/Contact";
-// import Cart from "./component/shopping/cart/Cart";
+import ProductCart from "./component/cart/ProductCart";
 // import Payment from "./component/shopping/payment/Payment";
 
 export default function App() {
@@ -19,7 +19,8 @@ export default function App() {
             <Route path="about" element={<About />}/>
             <Route path="quick-shopping" element={<Shopping />}/>
             <Route path="contact" element={<Contact />}/>
-            {/* <Route path="cart" element={<Cart/>}/> */}
+            <Route path="cart" element={<ProductCart />}/>
+            
             {/* <Route path="payment" element={<Payment/>}/> */}
           </Route>
          
