@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useStripe } from '@stripe/react-stripe-js';
 
-function Paybutton() {
+function Orderbutton() {
   const stripe = useStripe();
 
   const handleClick = async () => {
@@ -18,7 +18,7 @@ function Paybutton() {
     }
   };
 
-  return <button onClick={handleClick} className='bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold text-lg px-8 py-3 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:from-teal-500 hover:to-green-500 focus:outline-none'>Pay Now</button>;
+  return <button onClick={handleClick}>Confirm Order</button>;
 }
 
-export default Paybutton;
+export default Orderbutton;
