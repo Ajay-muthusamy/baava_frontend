@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const ProductCart = () => {
   const location = useLocation();
-  const data = location.state.array;
-  const totalAmount = location.state.total;
-
+  // const data = location.state?.array || [];
+  
+  const products = useSelector((state) => state.products.products);
+  const [data]=useState(products[0].updatedata.products) 
+  const [totalAmount] = useState(products[0].updatedata.totalAmount);
+  console.log("from product page",);
   return (
     <div className="bg-gradient-to-r from-gray-100 to-blue-100 min-h-screen py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-4">

@@ -212,7 +212,7 @@ const ProductList = () => {
     return Object.keys(errors).length === 0;
   };
   const [selectedProducts, setSelectedProducts] = useState([]);
-  // console.log(selectedProducts)
+  console.log(selectedProducts);
   const totalItems = Object.values(products)
     .flat()
     .reduce((sum, product) => sum + product.quantity, 0);
@@ -304,20 +304,14 @@ const ProductList = () => {
     setSelectedProduct(null);
   };
 
-  const handleSubmit = async (e) => {
+  const handlesubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      const customerData = await addcustomerDetails(CutomerDetails);
-      dispatch(addProducts(customerData));
-      console.log(CutomerDetails);
-      toast.success("Your Order Placed...");
-      setTimeout(() => navigate("/quick-shopping"), 3000);
-      setShowModal(false);
-    }
+    dispatch(addProducts(CutomerDetails));
+    navigate("/cart");
+    console.log(CutomerDetails.updatedata.products);
+    console.log("triggered");
   };
 
-
-  console.log(CutomerDetails)
   return (
     <div>
       <div className=" sticky top-0 bg-white  pb-2">
@@ -1804,7 +1798,7 @@ const ProductList = () => {
                   : "bg-sky-950"
               }`}
               disabled={totalItems === 0}
-              onClick={() => navigate("/cart", {state: { array: updatedata.products, total:updatedata.totalAmount} } )}
+              onClick={handlesubmit}
             >
               Proceed to Checkout
             </button>
@@ -1866,7 +1860,7 @@ const ProductList = () => {
                   <h2 className="text-2xl font-bold mb-4">
                     Enter your Details
                   </h2>
-                  <form onSubmit={handleSubmit}>
+                  <form>
                     <div className="mb-4">
                       <label className="block text-gray-700 mb-2">Name</label>
                       <input
