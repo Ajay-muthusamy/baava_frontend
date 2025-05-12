@@ -6,6 +6,8 @@ const initialState = {
     products:[]
 }
 
+
+
 export const addcustomerDetails = async(customerdata) =>{
     try {
         const response = axios.post("https://baava-backend-new-1.onrender.com/user/data",customerdata);
@@ -17,17 +19,45 @@ export const addcustomerDetails = async(customerdata) =>{
 }
 
 const customer = createSlice({
-    name:'products',
+    name: 'products',
     initialState,
-    reducers:{
-        addProducts:(state,action) =>{
-            console.log("addProducts Reducer triggerd");
-            state.products.push(action.payload);
-            console.log("Current Producuts in the slice",state.products);
+    reducers: {
+      addProducts: (state, action) => {
+        state.products.push(action.payload);
+      },
+  
+      increaseQuantity: (state, action) => {
+        const item = state.products[0]?.updatedata?.products?.find(
+          (p) => p.title === action.payload
+        );
+        if (item) {
+          item.quantity += 1;
+          item.subtotal = item.quantity * item.price;
         }
-    }
-})
-
-
-export const{addProducts,cutomerdetails}=customer.actions;
-export default customer.reducer;
+  
+        state.products[0].updatedata.totalAmount = state.products[0].updatedata.products.reduce(
+          (acc, product) => acc + product.subtotal,
+          0
+        );
+      },
+  
+      decreaseQuantity: (state, action) => {
+        const item = state.products[0]?.updatedata?.products?.find(
+          (p) => p.title === action.payload
+        );
+        if (item && item.quantity > 1) {
+          item.quantity -= 1;
+          item.subtotal = item.quantity * item.price;
+        }
+  
+        state.products[0].updatedata.totalAmount = state.products[0].updatedata.products.reduce(
+          (acc, product) => acc + product.subtotal,
+          0
+        );
+      },
+    },
+  });
+  
+  export const { addProducts, increaseQuantity, decreaseQuantity } = customer.actions;
+  export default customer.reducer;
+  

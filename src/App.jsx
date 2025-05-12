@@ -6,7 +6,7 @@ import About from "./component/about/About";
 import Home from "./component/home/Home";
 import Contact from "./component/contact/Contact";
 import ProductCart from "./component/cart/ProductCart";
-// import Payment from "./component/shopping/payment/Payment";
+import PaymentPage from "./component/cart/PaymentPage";
 
 export default function App() {
 
@@ -20,6 +20,7 @@ export default function App() {
             <Route path="quick-shopping" element={<Shopping />}/>
             <Route path="contact" element={<Contact />}/>
             <Route path="cart" element={<ProductCart />}/>
+            <Route path="payment" element={<PaymentPage />}/>
             
             {/* <Route path="payment" element={<Payment/>}/> */}
           </Route>
