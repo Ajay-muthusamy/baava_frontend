@@ -55,19 +55,31 @@ const PaymentPage = () => {
       alert("Razorpay SDK failed to load. Are you online?");
       return;
     }
-
+  
     const totalAmount = cartData.reduce((sum, item) => sum + item.subtotal, 0);
-
+  
+    const customerDetail = {
+      formData,
+      cartData,
+      finalAmount: totalAmount, // ensure correct amount
+    };
+  
     const options = {
       key: "rzp_test_4rdgre6savrrmw",
       amount: totalAmount * 100,
       currency: "INR",
       name: "BAAVA CRACKERS",
       description: "Online Payment",
-      handler: function (response) {
-        alert(
-          `Payment successful! Razorpay ID: ${response.razorpay_payment_id}`
-        );
+      handler: async function (response) {
+        alert(`Payment successful! Razorpay ID: ${response.razorpay_payment_id}`);
+  
+        try {
+          await axios.post("https://baava-backend-new-1.onrender.com/user/data", customerDetail);
+          alert("Customer data saved successfully!");
+        } catch (error) {
+          console.error("Error sending data to backend:", error);
+          alert("Payment succeeded, but data not saved.");
+        }
       },
       prefill: {
         name: formData.name,
@@ -77,10 +89,11 @@ const PaymentPage = () => {
         color: "#F59E0B",
       },
     };
-
+  
     const rzp = new window.Razorpay(options);
     rzp.open();
   };
+  
 
   const handlePaymentConfirm = async () => {
     if (!selectedPayment) {
@@ -97,7 +110,7 @@ const PaymentPage = () => {
         console.log("customer Data",formData);
         console.log("Cart Data",cartData);
         console.log("Final Amount",finalAmount);
-      await axios.post("http://localhost:1234/user/data",customerDetail);
+      await axios.post("https://baava-backend-new-1.onrender.com/user/data",customerDetail);
     } else if (selectedPayment === "Online Payment") {
       handleOnlinePayment();
     }
