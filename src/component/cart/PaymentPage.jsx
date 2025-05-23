@@ -119,8 +119,6 @@ const PaymentPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <h1 className="text-3xl font-bold mb-6 text-center">Payment Page</h1>
-
-      {/* Cart Items */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-4">Cart Items</h2>
         {cartData.map((item, index) => (
@@ -134,8 +132,6 @@ const PaymentPage = () => {
           </div>
         ))}
       </div>
-
-      {/* Shipping Form */}
       <div className="bg-white p-6 rounded shadow mb-8">
         <h2 className="text-xl font-semibold mb-4">Shipping Details</h2>
 
