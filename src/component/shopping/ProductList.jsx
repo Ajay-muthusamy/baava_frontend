@@ -38,16 +38,17 @@ import { BsChevronDown } from "react-icons/bs";
 const ProductList = () => {
   // dropdown handling
   const categoryItems = [
-    { id: "night-fancy", name: "Night Fancy" },
-    { id: "sky-shots-pipe", name: "Sky Shots Pipe" },
-    { id: "wala", name: "Wala" },
-    { id: "kids-special", name: "Kids Special" },
-    { id: "bombs", name: "Bombs" },
-    { id: "sparkles", name: "Sparkles" },
-    { id: "multi-sky-shots", name: "Multi Sky Shots" },
-    { id: "paper-bombs", name: "Paper Bombs" },
-    { id: "fountains", name: "Fountains" },
-    { id: "day-fancy", name: "Others" }
+    { id: "Bijili", name: "Bijili" },
+    { id: "night-fancy", name: "night fancy" },
+    { id: "Sparkles", name: "Sparkles" },
+    { id: "Fountains", name: "Fountains" },
+    { id: "kids-Special", name: "kids Special" },
+    { id: "wala", name: "wala" },
+    { id: "Bombs", name: "Bombs" },
+    { id: "paper-bombs", name: "Paper bombs" },
+    { id: "Sky-shots-pipe", name: "Sky shots pipe" },
+    { id: "Multi-SKY-SHOTS", name: "Multi SKY SHOTS" },
+    { id: "others", name: "others" },
   ];
 
   const navigate = useNavigate();
