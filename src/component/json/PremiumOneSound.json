@@ -2,23 +2,52 @@
     
     {
         "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA990aM_0LXmYYn9RnmfVEWjt22SO_RnHE3w&s",
-        "title":"2.75 kuruvi premium",
-        "price":9.00
+        "title":"1K LAR ",
+        "price":270.00
     },
     {
         "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268510.jpg",
-        "title":"4” lakshmi premium",
-        "price":22.00
+        "title":"1K SVKS LAR ",
+        "price":125.00
     },
     {
         "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268567.jpg",
-        "title":"4 Gold lakshmi premium",
-        "price":32.00
+        "title":"2K SVKS LAR ",
+        "price":119.00
     },
     {
         "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268618.jpg",
-        "title":"5” mega dlx premium",
-        "price":50.00
+        "title":"2K SPL LAR",
+        "price":539.00
+    },
+    {
+        "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268618.jpg",
+        "title":"5K SVKS LAR",
+        "price":549.00
+    },
+    {
+        "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268618.jpg",
+        "title":"5K SPL LAR",
+        "price":1299.00
+    },
+    {
+        "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268618.jpg",
+        "title":"10K SVKS LAR",
+        "price":1099.00
+    },
+    {
+        "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268618.jpg",
+        "title":"10K SPL LAR",
+        "price":1499.00
+    },
+    {
+        "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268618.jpg",
+        "title":"50K SVKS LAR",
+        "price":7999.00
+    },
+    {
+        "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723268618.jpg",
+        "title":"100K/1LAKH SVKS LAR",
+        "price":14999.00
     }
-
 ]
