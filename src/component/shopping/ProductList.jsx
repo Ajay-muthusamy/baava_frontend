@@ -539,7 +539,7 @@ const ProductList = () => {
             <tr>
               <td colSpan="5" className=" font-bold text-lg p-4 text-left ">
                 <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
-                  One Sound
+                  BOMB
                 </span>
               </td>
             </tr>
