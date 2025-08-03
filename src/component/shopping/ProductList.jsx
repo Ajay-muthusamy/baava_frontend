@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -32,8 +32,24 @@ import MatchBox from "../json/MatchBox.json";
 import PremiumRocket from "../json/PremiumRocket.json";
 import Bijili from "../json/biliji.json";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { BsChevronDown } from "react-icons/bs";
 
 const ProductList = () => {
+  // dropdown handling
+  const categoryItems = [
+    { id: "night-fancy", name: "Night Fancy" },
+    { id: "sky-shots-pipe", name: "Sky Shots Pipe" },
+    { id: "wala", name: "Wala" },
+    { id: "kids-special", name: "Kids Special" },
+    { id: "bombs", name: "Bombs" },
+    { id: "sparkles", name: "Sparkles" },
+    { id: "multi-sky-shots", name: "Multi Sky Shots" },
+    { id: "paper-bombs", name: "Paper Bombs" },
+    { id: "fountains", name: "Fountains" },
+    { id: "day-fancy", name: "Day Fancy" },
+  ];
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [Offer, setOffer] = useState(null);
@@ -312,6 +328,26 @@ const ProductList = () => {
     console.log("triggered");
   };
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setDropdownOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div>
       <div className=" sticky top-0 bg-white  pb-2">
@@ -351,6 +387,33 @@ const ProductList = () => {
               Order Now
             </button>
           </div>
+        </div>
+      </div>
+
+      <div ref={dropdownRef} className="ms-10">
+        <div className="relative group">
+          <button
+            onClick={toggleDropdown}
+            className="flex items-center gap-1 border-2 p-3 rounded-md"
+          >
+            Shop by Category <BsChevronDown />
+          </button>
+
+          {dropdownOpen && (
+            <ul className="absolute top-full left-0 mt-2 bg-white text-black shadow-lg rounded-md z-50 p-2 w-48">
+              {categoryItems.map(({ id, name }) => (
+                <li  className="hover:bg-blue-100 px-3 py-1 rounded">
+                  <a 
+                    href={`#${id}`}
+                    onClick={() => setDropdownOpen(false)}
+                    className="block w-full"
+                  >
+                    {name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
 
@@ -741,7 +804,7 @@ const ProductList = () => {
               </tr>
             ))}
 
-            <tr>
+            <tr id="night-fancy">
               <td colSpan="5" className=" font-bold text-lg  text-left p-4">
                 <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
                   FLOWER POTS PREMIUM
