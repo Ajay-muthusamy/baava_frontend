@@ -2,34 +2,39 @@
     
     {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723276087.jpg",
-        "title":"Adiyal",
-        "price":260.00
+        "title":"7CM ELECTRIC (1O BOX)",
+        "price":90.00
     },
     {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723276144.jpg",
-        "title":"Don",
-        "price":220.00
+        "title":"7CM COLOUR 102 (10 BOX)",
+        "price":95.00
     },
     {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723276195.jpg",
-        "title":"250 gm",
-        "price":52.00
-    },
-    {
-        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723276237.jpg",
-        "title":"500gm 70",
+        "title":"7CM FOREST (10 BOX)",
         "price":99.00
     },
     {
+        "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723276237.jpg",
+        "title":"7CM RED (10 BOX)",
+        "price":105.00
+    },
+    {
         "image":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723276282.jpg",
-        "title":"1kg",
-        "price":170.00
+        "title":"10CM ELECTRIC (5 BOX)",
+        "price":72.00
     }
     ,
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"Colour paper bomb",
-        "price":60.00
+        "title":"10CM COLOR (5 BOX)",
+        "price":77.00
+    },
+    {
+        "img":"https://www.alagucrackers.in/Best-Crackers-Online-Theni/1723275893.jpg",
+        "title":"10CM FOREST (5 BOX)",
+        "price":82.00
     }
 
 ]
