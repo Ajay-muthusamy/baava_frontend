@@ -17,7 +17,7 @@ const Footer2 = () => {
           </div>
           <div className="flex gap-2">
             <FaPhoneVolume />
-            <h2>+91 - 6383290293</h2>
+            <h2>+91 - 73732 68888</h2>
           </div>
         </div>
         <div>
