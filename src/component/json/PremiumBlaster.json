@@ -2,23 +2,53 @@
     
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"1K",
-        "price":280.00
+        "title":"10CM ELECTRIC (5 BOX)",
+        "price":59.00
     },
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"2k",
-        "price":550.00
+        "title":"10CM COLOR (5 BOX)",
+        "price":65.00
     },
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"5k",
-        "price":1250.00
+        "title":"10CM GREEN (5 BOX)",
+        "price":72.00
     },
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"10 K",
-        "price":2500.00
+        "title":"10CM RED (5 BOX)",
+        "price":79.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"12CM ELECTRIC (5 BOX)",
+        "price":79.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"12CM COLOR (5 BOX)",
+        "price":85.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"15CM ELECTRIC (2 BOX)",
+        "price":55.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"15CM COLOR (2 BOX)",
+        "price":59.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"30CM ELECTRIC (2 BOX)",
+        "price":59.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"30CM COLOR (2 BOX)",
+        "price":62.00
     }
 
 ]

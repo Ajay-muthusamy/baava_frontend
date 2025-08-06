@@ -647,7 +647,7 @@ const ProductList = () => {
             <tr>
               <td colSpan="5" className=" font-bold text-lg  text-left p-4">
                 <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
-                  SPARKELS
+                  PREIMUM SPARKELS
                 </span>
               </td>
             </tr>
@@ -702,7 +702,7 @@ const ProductList = () => {
             <tr>
               <td colSpan="5" className=" font-bold text-lg  text-left p-4">
                 <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
-                  PREMIUM BLASTER
+                  SPARKLES
                 </span>
               </td>
             </tr>
