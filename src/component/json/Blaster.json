@@ -2,23 +2,68 @@
     
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"1K",
-        "price":150.00
+        "title":"NORMAL F/P ASHOKA",
+        "price":72.00
     },
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"2k",
-        "price":300.00
+        "title":"NORMAL F/P COLOR KOTI",
+        "price":129.00
     },
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"5k",
-        "price":680.00
+        "title":"FP SUPER DELUXE",
+        "price":99.00
     },
     {
         "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
-        "title":"10 K",
-        "price":1350.00
+        "title":"FP DELUXE",
+        "price":135.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"MAMA BISKOTHU",
+        "price":175.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"DU BU KU",
+        "price":459.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"KAMNATI",
+        "price":555.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"COLOR KOTI DLX",
+        "price":270.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"PINK COLOR KOTI",
+        "price":315.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"SP PREMIUM COLOR KOTI",
+        "price":162.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"FP PREMIUM ASHOKA",
+        "price":105.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"FP BIG ",
+        "price":60.00
+    },
+    {
+        "image":"https://www.alagucrackers.in/uploads/noimage.jpg",
+        "title":"PREMIUM FP SPECIAL",
+        "price":72.00
     }
 
 ]
