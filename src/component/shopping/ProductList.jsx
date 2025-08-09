@@ -35,6 +35,13 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { BsChevronDown } from "react-icons/bs";
 
+import b1 from '../../../src/assets/banner/1.jpg'
+import b2 from '../../../src/assets/banner/2.jpg'
+import b3 from '../../../src/assets/banner/3.jpg'
+import b4 from '../../../src/assets/banner/4.jpg'
+
+
+
 const ProductList = () => {
   // dropdown handling
   const categoryItems = [
@@ -1854,7 +1861,7 @@ const ProductList = () => {
         </table>
 
         <section>
-          <div className="flex flex-col sticky ">
+          <div className="flex flex-col sticky z-[-10]">
             <button
               className={`text-white font-sans p-3 rounded-lg mb-5 text-1xl ${
                 totalItems === 0
@@ -1895,6 +1902,13 @@ const ProductList = () => {
                   Loading offer details...
                 </p>
               )}
+
+              <div>
+                <img src={b1} alt="" className="m-3" />
+                <img src={b2} alt="" className="m-3" />
+                <img src={b3} alt="" className="m-3" />
+                <img src={b4} alt="" className="m-3" />
+              </div>
             </div>
             {selectedProduct && (
               <div
