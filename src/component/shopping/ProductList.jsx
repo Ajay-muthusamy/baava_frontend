@@ -1904,7 +1904,6 @@ const ProductList = () => {
               )}
 
               <div>
-                <img src={b1} alt="" className="m-3" />
                 <img src={b2} alt="" className="m-3" />
                 <img src={b3} alt="" className="m-3" />
                 <img src={b4} alt="" className="m-3" />
