@@ -16,6 +16,7 @@ const Home = () => {
 
   return (
     <div>
+        <img src="https://static.vecteezy.com/system/resources/previews/012/388/807/non_2x/happy-diwali-banner-for-festival-of-lights-diwali-celebration-card-background-free-vector.jpg" alt=""  />
       <div className="flex flex-col md:flex-row justify-center items-center h-[70vh] ">
         <main className="flex flex-col items-center justify-center md:items-start text-center md:text-left mt-10 md:mt-0 md:mr-20  text-gray-800">
           <h1 className="font-poppins text-lg md:text-xl uppercase ">
