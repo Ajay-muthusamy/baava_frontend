@@ -1197,7 +1197,7 @@ const ProductList = () => {
               </tr>
             ))}
 
-            <tr>
+            {/* <tr>
               <td colSpan="5" className=" font-bold text-lg  text-left p-4">
                 <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
                   WHISTLING SHOTS
@@ -1801,9 +1801,9 @@ const ProductList = () => {
                   Rs: {data.subtotal} .00
                 </td>
               </tr>
-            ))}
+            ))} */}
 
-            <tr>
+            {/* <tr>
               <td colSpan="5" className=" font-bold text-lg  text-left p-4">
                 <span className="bg-blue-500 p-2 rounded-lg mt-2 text-white">
                   PREMIUM ROCKET
@@ -1856,7 +1856,7 @@ const ProductList = () => {
                   Rs: {data.subtotal} .00
                 </td>
               </tr>
-            ))}
+            ))} */}
           </tbody>
         </table>
 
