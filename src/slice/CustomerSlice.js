@@ -1,57 +1,74 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
-  products: JSON.parse(localStorage.getItem("cart"))?.products || [],
+  products: JSON.parse(localStorage.getItem("cart")) || [], // ✅ Load from localStorage
 };
 
+export const addcustomerDetails = async (customerdata) => {
+  try {
+    const response = axios.post(
+      "https://baava-backend-new-1.onrender.com/user/data",
+      customerdata
+    );
+    console.log(customerdata);
+    return response.data;
+  } catch (error) {
+    console.error("Error adding customer details:", error);
+  }
+};
+
+// ✅ Helper to save state to localStorage
 const saveToLocalStorage = (state) => {
-  const totalAmount = state.products.reduce((sum, item) => sum + item.subtotal, 0);
-  localStorage.setItem("cart", JSON.stringify({
-    products: state.products,
-    totalAmount,
-  }));
+  localStorage.setItem("cart", JSON.stringify(state.products));
 };
 
-const customerSlice = createSlice({
+const customer = createSlice({
   name: "products",
   initialState,
   reducers: {
-    addToCart: (state, action) => {
-      const item = action.payload;
-      const existing = state.products.find((p) => p.title === item.title);
-
-      if (existing) {
-        existing.quantity += 1;
-        existing.subtotal = existing.price * existing.quantity;
-      } else {
-        state.products.push({
-          ...item,
-          quantity: 1,
-          subtotal: item.price,
-        });
-      }
-      saveToLocalStorage(state);
+    addProducts: (state, action) => {
+      state.products.push(action.payload);
+      saveToLocalStorage(state); // ✅ Save after update
     },
+
     increaseQuantity: (state, action) => {
-      const item = state.products.find((p) => p.title === action.payload);
+      const item = state.products[0]?.updatedata?.products?.find(
+        (p) => p.title === action.payload
+      );
       if (item) {
         item.quantity += 1;
-        item.subtotal = item.price * item.quantity;
+        item.subtotal = item.quantity * item.price;
       }
-      saveToLocalStorage(state);
+
+      state.products[0].updatedata.totalAmount =
+        state.products[0].updatedata.products.reduce(
+          (acc, product) => acc + product.subtotal,
+          0
+        );
+
+      saveToLocalStorage(state); // ✅ Save after update
     },
+
     decreaseQuantity: (state, action) => {
-      const item = state.products.find((p) => p.title === action.payload);
+      const item = state.products[0]?.updatedata?.products?.find(
+        (p) => p.title === action.payload
+      );
       if (item && item.quantity > 1) {
         item.quantity -= 1;
-        item.subtotal = item.price * item.quantity;
+        item.subtotal = item.quantity * item.price;
       }
-      saveToLocalStorage(state);
+
+      state.products[0].updatedata.totalAmount =
+        state.products[0].updatedata.products.reduce(
+          (acc, product) => acc + product.subtotal,
+          0
+        );
+
+      saveToLocalStorage(state); // ✅ Save after update
     },
-    removeFromCart: (state, action) => {
-      state.products = state.products.filter((p) => p.title !== action.payload);
-      saveToLocalStorage(state);
-    },
+
+    // ✅ Optional clearCart reducer
     clearCart: (state) => {
       state.products = [];
       localStorage.removeItem("cart");
@@ -59,7 +76,6 @@ const customerSlice = createSlice({
   },
 });
 
-export const { addToCart, increaseQuantity, decreaseQuantity, removeFromCart, clearCart } =
-  customerSlice.actions;
-
-export default customerSlice.reducer;
+export const { addProducts, increaseQuantity, decreaseQuantity, clearCart } =
+  customer.actions;
+export default customer.reducer;
