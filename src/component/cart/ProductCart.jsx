@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increaseQuantity, decreaseQuantity } from "../../slice/CustomerSlice";
 import { useNavigate } from "react-router-dom";
@@ -8,9 +8,24 @@ const ProductCart = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
 
-  const data = products?.[0]?.updatedata?.products || [];
+  // ✅ State to hold products from localStorage
+  const [localProducts, setLocalProducts] = useState([]);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("products");
+    if (stored) {
+      setLocalProducts(JSON.parse(stored));
+    }
+  }, []);
+
+  // ✅ Prefer localStorage if available, else Redux
+  const data =
+    localProducts.length > 0
+      ? localProducts
+      : products?.[0]?.updatedata?.products || [];
+
   const totalAmount = data.reduce((sum, item) => sum + item.subtotal, 0);
-  console.log("AAAAA", totalAmount);
+
   return (
     <div className="bg-gradient-to-r from-gray-100 to-blue-100 min-h-screen py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-4">
@@ -61,6 +76,7 @@ const ProductCart = () => {
           )}
         </div>
 
+        {/* Order Summary */}
         <div className="bg-white rounded-xl shadow-lg p-6 h-fit">
           <h2 className="text-2xl font-semibold mb-4">Order Summary</h2>
           <div className="flex justify-between items-center mb-3">
