@@ -280,14 +280,10 @@ const ProductCart = () => {
                     className="p-6 hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center space-x-4">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-20 h-20 object-cover rounded-lg"
-                      />
+                      
 
                       <div className="flex-1">
-                        <h3 className="text-lg font-medium text-gray-800">
+                        <h3 className="text-sm font-medium text-gray-800">
                           {item.title}
                         </h3>
                         <p className="text-blue-600 font-semibold">
