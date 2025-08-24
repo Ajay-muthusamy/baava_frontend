@@ -1,80 +1,55 @@
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { increaseQuantity, decreaseQuantity } from "../../slice/CustomerSlice";
-import { useNavigate } from "react-router-dom";
 
 const ProductCart = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.products);
-
-  const [localProducts, setLocalProducts] = useState([]);
+  const [cartData, setCartData] = useState(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem("products");
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      if (Array.isArray(parsed) && parsed[0]?.updatedata?.products) {
-        setLocalProducts(parsed[0].updatedata.products);
+    const savedCartData = localStorage.getItem("customerDetails");
+    if (savedCartData) {
+      try {
+        const parsedData = JSON.parse(savedCartData);
+        console.log("Cart Data:", parsedData);
+        setCartData(parsedData.updatedata); // ✅ access updatedata properly
+      } catch (error) {
+        console.error("Error parsing localStorage data:", error);
       }
     }
   }, []);
 
-  const data =
-    localProducts.length > 0
-      ? localProducts
-      : products?.[0]?.updatedata?.products || [];
-
-  const totalAmount = data.reduce((sum, item) => sum + item.subtotal, 0);
-
   return (
-    <div>
-      <h1>Your Shopping Cart</h1>
+    <div className="p-5">
+      <h2 className="text-2xl font-bold mb-4">Cart</h2>
 
-      {data.length === 0 ? (
-        <p>Your cart is empty.</p>
+      {!cartData ? (
+        <p>No items in cart.</p>
       ) : (
-        data.map((item, index) => (
-          <div key={index}>
-            <h2>{item.title}</h2>
-            <p>Quantity: {item.quantity}</p>
-            <p>Price: ₹{item.price}</p>
-            <p>Subtotal: ₹{item.subtotal}</p>
+        <>
+          <table className="min-w-full border border-gray-300">
+            <thead>
+              <tr className="bg-gray-200">
+                <th className="border px-4 py-2">Product</th>
+                <th className="border px-4 py-2">Price</th>
+                <th className="border px-4 py-2">Quantity</th>
+                <th className="border px-4 py-2">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartData.products?.map((item, index) => (
+                <tr key={index}>
+                  <td className="border px-4 py-2">{item.title}</td>
+                  <td className="border px-4 py-2">₹{item.price}</td>
+                  <td className="border px-4 py-2">{item.quantity}</td>
+                  <td className="border px-4 py-2">₹{item.subtotal}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
-            <div>
-              <button onClick={() => dispatch(increaseQuantity(item.title))}>
-                +
-              </button>
-              <span>{item.quantity}</span>
-              <button
-                onClick={() => dispatch(decreaseQuantity(item.title))}
-                disabled={item.quantity <= 1}
-              >
-                -
-              </button>
-            </div>
+          <div className="mt-4 font-semibold text-lg">
+            Total: ₹{cartData.totalAmount}
           </div>
-        ))
+        </>
       )}
-
-      <h2>Order Summary</h2>
-      <p>Subtotal: ₹{totalAmount}</p>
-      <p>Shipping: ₹0</p>
-      <p>Total: ₹{totalAmount}</p>
-
-      <button
-        disabled={data.length === 0}
-        onClick={() =>
-          navigate("/payment", {
-            state: {
-              cartData: data,
-              finalAmount: totalAmount,
-            },
-          })
-        }
-      >
-        Proceed to Checkout
-      </button>
     </div>
   );
 };
