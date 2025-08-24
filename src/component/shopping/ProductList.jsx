@@ -247,6 +247,7 @@ const ProductList = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(addProducts(CutomerDetails));
+    localStorage.setItem("customerDetails", JSON.stringify(CutomerDetails));
     navigate("/cart");
   };
 

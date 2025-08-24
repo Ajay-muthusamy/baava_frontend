@@ -13,8 +13,13 @@ const ProductCart = () => {
 
   useEffect(() => {
     const stored = localStorage.getItem("products");
+    console.log("from cart page", stored);
     if (stored) {
-      setLocalProducts(JSON.parse(stored));
+      const parsed = JSON.parse(stored);
+      // ✅ Safely extract products if structure matches
+      if (Array.isArray(parsed) && parsed[0]?.updatedata?.products) {
+        setLocalProducts(parsed[0].updatedata.products);
+      }
     }
   }, []);
 
@@ -24,15 +29,15 @@ const ProductCart = () => {
       ? localProducts
       : products?.[0]?.updatedata?.products || [];
 
+  // ✅ Calculate total amount
   const totalAmount = data.reduce((sum, item) => sum + item.subtotal, 0);
 
   return (
     <div className="bg-gradient-to-r from-gray-100 to-blue-100 min-h-screen py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-4">
+        {/* Cart Products */}
         <div className="lg:col-span-2 space-y-6">
-          <h1 className="text-3xl font-bold text-gray-800">
-            Your Shopping Cart
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-800">Your Shopping Cart</h1>
 
           {data.length === 0 ? (
             <p className="text-gray-500">Your cart is empty.</p>
@@ -47,6 +52,7 @@ const ProductCart = () => {
                     {item.title}
                   </h2>
                   <p className="text-gray-500">Quantity: {item.quantity}</p>
+                  <p className="text-gray-500">Price: ₹{item.price}</p>
                 </div>
                 <div className="flex gap-12">
                   <div>

@@ -190,7 +190,7 @@ const PaymentPage = () => {
       <div className="bg-white p-6 rounded shadow mb-8">
         <h2 className="text-xl font-semibold mb-4">Select Payment Method</h2>
         <div className="space-y-3">
-          {["Cash on Delivery", "Online Payment"].map((method) => (
+          {["Cash on Delivery"].map((method) => (
             <div key={method} className="flex items-center gap-3">
               <input
                 type="radio"
