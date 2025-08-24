@@ -379,7 +379,7 @@ const ProductList = () => {
                 : "bg-blue-600 hover:bg-blue-700"
             }`}
             disabled={totalItems === 0}
-            onClick={() => navigate("/cart")}
+            onClick={handleSubmit}
           >
             {totalItems === 0 ? "Select Items to Order" : "Order Now"}
           </button>
