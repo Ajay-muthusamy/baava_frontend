@@ -75,7 +75,7 @@ const PaymentPage = () => {
         alert(`Payment successful! Razorpay ID: ${response.razorpay_payment_id}`);
         try {
           await axios.post("https://baava-backend-new-1.onrender.com/user/data", customerDetail);
-          setOrderConfirmed(true); // ✅ Show confirmation dialog
+          setOrderConfirmed(true); 
         } catch (error) {
           console.error("Error sending data to backend:", error);
           alert("Payment succeeded, but data not saved.");

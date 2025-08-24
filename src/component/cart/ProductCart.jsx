@@ -1,5 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Trash2, Plus, Minus, ShoppingCart, Sparkles, Star } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Trash2,
+  Plus,
+  Minus,
+  ShoppingCart,
+  Sparkles,
+  Star,
+} from "lucide-react";
+import axios from "axios";
 
 const ProductCart = () => {
   // Get cart data from localStorage
@@ -161,24 +169,35 @@ const ProductCart = () => {
     return Object.keys(errors).length === 0;
   };
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     if (validateForm()) {
+
       const orderData = {
         customerDetails,
-        items: cartItems,
-        totalItems,
-        totalAmount,
-        orderDate: new Date().toISOString(),
+        products: cartItems,   
+        totalAmount
       };
 
-      alert(
-        `🎆 Order placed successfully! We'll contact you at ${customerDetails.phone}. Total: ₹${totalAmount}`
-      );
+    
 
-      setCartItems([]);
-      localStorage.removeItem("customerDetails");
+      console.log(orderData);
 
-      console.log("Order Data:", orderData);
+      try {
+        const res = await axios.post(
+          "https://baava-backend-new-1.onrender.com/user/data", 
+          
+          orderData
+        );
+
+        if (res.status === 200 || res.status === 201) {
+          alert("Order placed successfully! We'll contact you soon.");
+          setCartItems([]);
+          localStorage.removeItem("customerDetails");
+        }
+      } catch (err) {
+        console.error("Error saving order:", err);
+        alert(" Something went wrong while placing order.");
+      }
     }
   };
 
@@ -224,7 +243,9 @@ const ProductCart = () => {
           ))}
           <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
             <div className="text-center text-white">
-              <h1 className="text-4xl font-bold mb-2 animate-pulse">🎆 BOOM! 🎆</h1>
+              <h1 className="text-4xl font-bold mb-2 animate-pulse">
+                🎆 BOOM! 🎆
+              </h1>
               <p className="text-xl">You found the Easter egg!</p>
             </div>
           </div>
@@ -280,8 +301,6 @@ const ProductCart = () => {
                     className="p-6 hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center space-x-4">
-                      
-
                       <div className="flex-1">
                         <h3 className="text-sm font-medium text-gray-800">
                           {item.title}
