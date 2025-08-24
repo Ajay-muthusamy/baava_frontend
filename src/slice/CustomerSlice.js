@@ -1,63 +1,65 @@
-import {createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    
-    products:[]
-}
+  products: JSON.parse(localStorage.getItem("cart"))?.products || [],
+};
 
+const saveToLocalStorage = (state) => {
+  const totalAmount = state.products.reduce((sum, item) => sum + item.subtotal, 0);
+  localStorage.setItem("cart", JSON.stringify({
+    products: state.products,
+    totalAmount,
+  }));
+};
 
+const customerSlice = createSlice({
+  name: "products",
+  initialState,
+  reducers: {
+    addToCart: (state, action) => {
+      const item = action.payload;
+      const existing = state.products.find((p) => p.title === item.title);
 
-export const addcustomerDetails = async(customerdata) =>{
-    try {
-        const response = axios.post("https://baava-backend-new-1.onrender.com/user/data",customerdata);
-        console.log(customerdata);
-        return response.data;
-    } catch (error) {
-        console.error('Error adding customer details:', error);
-    }
-}
-
-const customer = createSlice({
-    name: 'products',
-    initialState,
-    reducers: {
-      addProducts: (state, action) => {
-        state.products.push(action.payload);
-      },
-  
-      increaseQuantity: (state, action) => {
-        const item = state.products[0]?.updatedata?.products?.find(
-          (p) => p.title === action.payload
-        );
-        if (item) {
-          item.quantity += 1;
-          item.subtotal = item.quantity * item.price;
-        }
-  
-        state.products[0].updatedata.totalAmount = state.products[0].updatedata.products.reduce(
-          (acc, product) => acc + product.subtotal,
-          0
-        );
-      },
-  
-      decreaseQuantity: (state, action) => {
-        const item = state.products[0]?.updatedata?.products?.find(
-          (p) => p.title === action.payload
-        );
-        if (item && item.quantity > 1) {
-          item.quantity -= 1;
-          item.subtotal = item.quantity * item.price;
-        }
-  
-        state.products[0].updatedata.totalAmount = state.products[0].updatedata.products.reduce(
-          (acc, product) => acc + product.subtotal,
-          0
-        );
-      },
+      if (existing) {
+        existing.quantity += 1;
+        existing.subtotal = existing.price * existing.quantity;
+      } else {
+        state.products.push({
+          ...item,
+          quantity: 1,
+          subtotal: item.price,
+        });
+      }
+      saveToLocalStorage(state);
     },
-  });
-  
-  export const { addProducts, increaseQuantity, decreaseQuantity } = customer.actions;
-  export default customer.reducer;
-  
+    increaseQuantity: (state, action) => {
+      const item = state.products.find((p) => p.title === action.payload);
+      if (item) {
+        item.quantity += 1;
+        item.subtotal = item.price * item.quantity;
+      }
+      saveToLocalStorage(state);
+    },
+    decreaseQuantity: (state, action) => {
+      const item = state.products.find((p) => p.title === action.payload);
+      if (item && item.quantity > 1) {
+        item.quantity -= 1;
+        item.subtotal = item.price * item.quantity;
+      }
+      saveToLocalStorage(state);
+    },
+    removeFromCart: (state, action) => {
+      state.products = state.products.filter((p) => p.title !== action.payload);
+      saveToLocalStorage(state);
+    },
+    clearCart: (state) => {
+      state.products = [];
+      localStorage.removeItem("cart");
+    },
+  },
+});
+
+export const { addToCart, increaseQuantity, decreaseQuantity, removeFromCart, clearCart } =
+  customerSlice.actions;
+
+export default customerSlice.reducer;
