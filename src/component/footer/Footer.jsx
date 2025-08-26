@@ -32,7 +32,7 @@ const Footer = () => {
           <div className="flex flex-col items-center mb-4 md:mb-0">
             <Player autoplay loop src={phoneAnime} className="w-52 md:w-52" />
             <h1 className="font-bold text-center text-sm md:text-base">
-               +91 - 73733 68888
+               +91 - 73732 68888
               <br />
                +91 - 63832 90293
             </h1>
