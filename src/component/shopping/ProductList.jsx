@@ -41,7 +41,6 @@ import b3 from '../../../src/assets/banner/3.jpg'
 import b4 from '../../../src/assets/banner/4.jpg'
 
 const ProductList = () => {
-  // Category items with proper IDs matching the sections
   const categoryItems = [
     { id: "Bijili", name: "Bijili" },
     { id: "wala", name: "Wala" },
@@ -352,7 +351,7 @@ const ProductList = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Sticky Header */}
       <div className="sticky top-0 bg-white shadow-md z-40 pb-4">
-        {/* Stats Section */}
+        <marquee behavior="" direction="">Coolie Comb </marquee>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 max-w-7xl mx-auto">
           <div className="hidden md:block bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg text-center">
             <div className="text-sm opacity-90">Total Products</div>
@@ -381,7 +380,7 @@ const ProductList = () => {
             disabled={totalItems === 0}
             onClick={handleSubmit}
           >
-            {totalItems === 0 ? "Select Items to Order" : "Order Now"}
+            Proceed to Checkout
           </button>
         </div>
       </div>

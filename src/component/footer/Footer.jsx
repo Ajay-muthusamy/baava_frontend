@@ -18,14 +18,14 @@ const Footer = () => {
               className="w-52 md:w-52"
             />
 
-            <h1 className="font-bold text-center">DELIVERY</h1>
-            <h1 className="font-bold text-center">Facility Available</h1>
+            <h1 className="font-bold text-center">Home Delivery</h1>
+            <p>(TN, BLRE & PY ONLY)</p>
           </div>
 
           <div className="flex flex-col items-center mb-4 md:mb-0">
             <Player autoplay loop src={moneyAnime} className="w-52 md:w-52 " />
             <h1 className="font-bold text-center text-sm md:text-base w-[40vh]">
-              DELIVERY Facility Available MINIMUM ORDER - Rs. 2500.00
+              MINIMUM ORDER - Rs. 2500.00
             </h1>
           </div>
 
