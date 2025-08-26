@@ -281,7 +281,7 @@ const ProductList = () => {
     { id: "Sparkles", name: "Sparklers", data: products.PremiumBlaster, color: "bg-pink-500" },
     { id: "Fountains", name: "Fountains", data: products.Blaster, color: "bg-indigo-500" },
     { id: "kids-Special", name: "Kids Special", data: products.FlowerPotPremium, color: "bg-orange-500" },
-    { id: "fountain-chakram", name: "Fountain", data: products.GroundChakraPremium, color: "bg-teal-500" },
+    { id: "fountain-chakram", name: "Fancy Fountains", data: products.GroundChakraPremium, color: "bg-teal-500" },
     { id: "chakram", name: "Chakram", data: products.FlowerPots, color: "bg-cyan-500" },
     { id: "pencil", name: "Pencil", data: products.FancyFountainPremium, color: "bg-lime-500" },
     { id: "Sky-shots-pipe", name: "Sky Shots - Rocket", data: products.FancyChakaraPremium, color: "bg-emerald-500" },

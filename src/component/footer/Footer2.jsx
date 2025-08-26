@@ -12,7 +12,7 @@ const Footer2 = () => {
       {/* Paragraph Section */}
       <div className="px-6 md:px-36 text-center">
         {showInfo && (
-          <p className="text-gray-300 text-sm leading-relaxed bg-blue-900 p-4 rounded-lg shadow-md">
+          <p className="text-gray-300 text-sm leading-relaxed bg-[#eb53ffca] p-4 rounded-lg shadow-md">
             As per 2018 supreme court order, online sale of firecrackers are not
             permitted! We value our customers and at the same time, respect
             jurisdiction. We request you to add your products to the cart and
