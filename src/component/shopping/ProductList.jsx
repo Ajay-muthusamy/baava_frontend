@@ -351,7 +351,7 @@ const ProductList = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Sticky Header */}
       <div className="sticky top-0 bg-white shadow-md z-40 pb-4">
-        <marquee behavior="" direction="">Coolie Comb </marquee>
+        <marquee behavior="" direction="" className="font-bold bg-yellow-500">Dear Customer - @3499 ₹ Diwali Special "COOLIE COMBO" is Ready for Budget friendly Sale</marquee>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 max-w-7xl mx-auto">
           <div className="hidden md:block bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg text-center">
             <div className="text-sm opacity-90">Total Products</div>
