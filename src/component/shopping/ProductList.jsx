@@ -390,7 +390,7 @@ const ProductList = () => {
         <div ref={dropdownRef} className="relative inline-block">
           <button
             onClick={toggleDropdown}
-            className="flex items-center gap-2 bg-white border-2 border-gray-300 hover:border-blue-500 p-3 rounded-lg font-medium transition-colors"
+            className="flex sticky top-28 items-center gap-2 bg-white border-2 border-gray-300 hover:border-blue-500 p-3 rounded-lg font-medium transition-colors"
           >
             Shop by Category <BsChevronDown className={`transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
           </button>
