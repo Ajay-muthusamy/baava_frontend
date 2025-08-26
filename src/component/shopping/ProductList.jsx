@@ -281,7 +281,7 @@ const ProductList = () => {
     { id: "Sparkles", name: "Sparklers", data: products.PremiumBlaster, color: "bg-pink-500" },
     { id: "Fountains", name: "Fountains", data: products.Blaster, color: "bg-indigo-500" },
     { id: "kids-Special", name: "Kids Special", data: products.FlowerPotPremium, color: "bg-orange-500" },
-    { id: "fountain-chakram", name: "Fountain Chakram", data: products.GroundChakraPremium, color: "bg-teal-500" },
+    { id: "fountain-chakram", name: "Fountain", data: products.GroundChakraPremium, color: "bg-teal-500" },
     { id: "chakram", name: "Chakram", data: products.FlowerPots, color: "bg-cyan-500" },
     { id: "pencil", name: "Pencil", data: products.FancyFountainPremium, color: "bg-lime-500" },
     { id: "Sky-shots-pipe", name: "Sky Shots - Rocket", data: products.FancyChakaraPremium, color: "bg-emerald-500" },
@@ -351,7 +351,7 @@ const ProductList = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Sticky Header */}
       <div className="sticky top-0 bg-white shadow-md z-40 pb-4">
-        <marquee behavior="" direction="" className="font-bold bg-yellow-500">Dear Customer - @3499 ₹ Diwali Special "COOLIE COMBO" is Ready for Budget friendly Sale</marquee>
+        <marquee behavior="" direction="" className="font-bold bg-[#ffdf0c]">Dear Customer - @3499 ₹ Diwali Special "COOLIE COMBO" is Ready for Budget friendly Sale</marquee>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 max-w-7xl mx-auto">
           <div className="hidden md:block bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg text-center">
             <div className="text-sm opacity-90">Total Products</div>
@@ -481,7 +481,7 @@ const ProductList = () => {
                   "Once you register your products, our team will reach out to you via phone or WhatsApp."
                 </p>
                 <div className="bg-blue-50 p-3 rounded-lg">
-                  <p className="font-bold text-blue-800">Support: +91-91696 06415</p>
+                  <p className="font-bold text-blue-800">Support: +91-73732 68888</p>
                 </div>
               </div>
             </div>
