@@ -1,6 +1,12 @@
 import React from "react";
 import { FaMapLocationDot } from "react-icons/fa6";
 import logo from '../../assets/IMG-20241004-WA0004.jpg'
+import img1 from '../../assets/img/1.jpeg';
+import img2 from '../../assets/img/2.jpeg';
+import img3 from '../../assets/img/3.jpeg';
+import img4 from '../../assets/img/4.jpeg';
+import img6 from '../../assets/img/6.jpeg';
+import img7 from '../../assets/img/7.jpeg';
 
 const Contact = () => {
   return (
@@ -73,6 +79,19 @@ const Contact = () => {
       <div className="hidden">
         <img src={logo} alt="" />
       </div>
+      <div id="multi-sky-shot">
+        <img src={img1} alt="" />
+        <img src={img2} alt="" />
+        <img src={img3} alt="" />
+      </div>
+
+      <div >
+        <img src={img6} alt="" id="fancy-fountain-god-king" />
+        <img src={img7} alt="" id="fancy-fountain-autumn" />
+        <img src={img4} alt="" id="fancy-fountain-tri-color" />
+      </div>
+
+
     </div>
   );
 };
