@@ -35,10 +35,10 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { BsChevronDown } from "react-icons/bs";
 
-import b1 from '../../../src/assets/banner/1.jpg'
-import b2 from '../../../src/assets/banner/2.jpg'
-import b3 from '../../../src/assets/banner/3.jpg'
-import b4 from '../../../src/assets/banner/4.jpg'
+import b1 from "../../../src/assets/banner/1.jpg";
+import b2 from "../../../src/assets/banner/2.jpg";
+import b3 from "../../../src/assets/banner/3.jpg";
+import b4 from "../../../src/assets/banner/4.jpg";
 
 const ProductList = () => {
   const categoryItems = [
@@ -63,7 +63,7 @@ const ProductList = () => {
   const [formErrors, setFormErrors] = useState({});
   const [updatedata, setupdatedata] = useState([]);
   const [loading, setLoading] = useState(false);
-  
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -128,11 +128,11 @@ const ProductList = () => {
   };
 
   const [selectedProducts, setSelectedProducts] = useState([]);
-  
+
   const totalItems = Object.values(products)
     .flat()
     .reduce((sum, product) => sum + product.quantity, 0);
-  
+
   const totalAmount = Object.values(products)
     .flat()
     .reduce((sum, product) => sum + product.subtotal, 0);
@@ -273,28 +273,98 @@ const ProductList = () => {
 
   // Product categories with their data and IDs
   const productCategories = [
-    { id: "Bijili", name: "Bijili", data: products.Bijili, color: "bg-blue-500" },
-    { id: "wala", name: "Wala", data: products.premiumOneSound, color: "bg-green-500" },
-    { id: "Bombs", name: "Bombs", data: products.oneSound, color: "bg-red-500" },
-    { id: "paper-bombs", name: "Paper Bombs", data: products.BombPremium, color: "bg-purple-500" },
-    { id: "premium-sparklers", name: "Premium Sparklers", data: products.PaperBomb, color: "bg-yellow-500" },
-    { id: "Sparkles", name: "Sparklers", data: products.PremiumBlaster, color: "bg-pink-500" },
-    { id: "Fountains", name: "Fountains", data: products.Blaster, color: "bg-indigo-500" },
-    { id: "kids-Special", name: "Kids Special", data: products.FlowerPotPremium, color: "bg-orange-500" },
-    { id: "fountain-chakram", name: "Fancy Fountains", data: products.GroundChakraPremium, color: "bg-teal-500" },
-    { id: "chakram", name: "Chakram", data: products.FlowerPots, color: "bg-cyan-500" },
-    { id: "pencil", name: "Pencil", data: products.FancyFountainPremium, color: "bg-lime-500" },
-    { id: "Sky-shots-pipe", name: "Sky Shots - Rocket", data: products.FancyChakaraPremium, color: "bg-emerald-500" },
-    { id: "sky-shot-pipe", name: "Sky Shot Pipe", data: products.FancyPencil, color: "bg-violet-500" },
-    { id: "Multi-SKY-SHOTS", name: "Multi Sky Shots", data: products.KidsNowelties, color: "bg-rose-500" },
+    {
+      id: "Bijili",
+      name: "Bijili",
+      data: products.Bijili,
+      color: "bg-blue-500",
+    },
+    {
+      id: "wala",
+      name: "Wala",
+      data: products.premiumOneSound,
+      color: "bg-green-500",
+    },
+    {
+      id: "Bombs",
+      name: "Bombs",
+      data: products.oneSound,
+      color: "bg-red-500",
+    },
+    {
+      id: "paper-bombs",
+      name: "Paper Bombs",
+      data: products.BombPremium,
+      color: "bg-purple-500",
+    },
+    {
+      id: "premium-sparklers",
+      name: "Premium Sparklers",
+      data: products.PaperBomb,
+      color: "bg-yellow-500",
+    },
+    {
+      id: "Sparkles",
+      name: "Sparklers",
+      data: products.PremiumBlaster,
+      color: "bg-pink-500",
+    },
+    {
+      id: "Fountains",
+      name: "Fountains",
+      data: products.Blaster,
+      color: "bg-indigo-500",
+    },
+    {
+      id: "kids-Special",
+      name: "Kids Special",
+      data: products.FlowerPotPremium,
+      color: "bg-orange-500",
+    },
+    {
+      id: "fountain-chakram",
+      name: "Fancy Fountains",
+      data: products.GroundChakraPremium,
+      color: "bg-teal-500",
+    },
+    {
+      id: "chakram",
+      name: "Chakram",
+      data: products.FlowerPots,
+      color: "bg-cyan-500",
+    },
+    {
+      id: "pencil",
+      name: "Pencil",
+      data: products.FancyFountainPremium,
+      color: "bg-lime-500",
+    },
+    {
+      id: "Sky-shots-pipe",
+      name: "Sky Shots - Rocket",
+      data: products.FancyChakaraPremium,
+      color: "bg-emerald-500",
+    },
+    {
+      id: "sky-shot-pipe",
+      name: "Sky Shot Pipe",
+      data: products.FancyPencil,
+      color: "bg-violet-500",
+    },
+    {
+      id: "Multi-SKY-SHOTS",
+      name: "Multi Sky Shots",
+      data: products.KidsNowelties,
+      color: "bg-rose-500",
+    },
   ];
 
   const QuantityButton = ({ onClick, children, disabled = false }) => (
     <button
       className={`w-8 h-8 flex items-center justify-center rounded-full font-bold text-lg transition-colors ${
-        disabled 
-          ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
-          : 'bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700'
+        disabled
+          ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+          : "bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700"
       }`}
       onClick={onClick}
       disabled={disabled}
@@ -351,7 +421,10 @@ const ProductList = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Sticky Header */}
       <div className="sticky top-0 bg-white shadow-md z-40 pb-4">
-        <marquee behavior="" direction="" className="font-bold bg-[#ffdf0c]">Dear Customer - @3499 ₹ Diwali Special "COOLIE COMBO" is Ready for Budget friendly Sale</marquee>
+        <marquee behavior="" direction="" className="font-bold bg-[#ffdf0c]">
+          Dear Customer - @3499 ₹ Diwali Special "COOLIE COMBO" is Ready for
+          Budget friendly Sale
+        </marquee>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 max-w-7xl mx-auto">
           <div className="hidden md:block bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg text-center">
             <div className="text-sm opacity-90">Total Products</div>
@@ -383,22 +456,27 @@ const ProductList = () => {
             Proceed to Checkout
           </button>
         </div>
-      </div>
 
-      {/* Category Dropdown */}
-      <div className="max-w-7xl mx-auto px-4 py-4">
-        <div ref={dropdownRef} className="relative inline-block">
+        <div ref={dropdownRef} className="relative inline-block m-5 mt-4 md:mx-36">
           <button
             onClick={toggleDropdown}
-            className="flex sticky top-28 items-center gap-2 bg-white border-2 border-gray-300 hover:border-blue-500 p-3 rounded-lg font-medium transition-colors"
+            className="flex sticky top-[50vh] z-50 items-center gap-2 bg-white border-2 border-gray-300 hover:border-blue-500 p-3 rounded-lg font-medium transition-colors"
           >
-            Shop by Category <BsChevronDown className={`transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
+             Category
+            <BsChevronDown
+              className={`transition-transform ${
+                dropdownOpen ? "rotate-180" : ""
+              }`}
+            />
           </button>
 
           {dropdownOpen && (
             <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-200 shadow-xl rounded-lg z-50 p-2 w-64 max-h-80 overflow-y-auto">
               {categoryItems.map(({ id, name }) => (
-                <li key={id} className="hover:bg-blue-50 rounded-md transition-colors">
+                <li
+                  key={id}
+                  className="hover:bg-blue-50 rounded-md transition-colors"
+                >
                   <a
                     href={`#${id}`}
                     onClick={() => setDropdownOpen(false)}
@@ -411,6 +489,12 @@ const ProductList = () => {
             </ul>
           )}
         </div>
+
+      </div>
+
+      {/* Category Dropdown */}
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        
       </div>
 
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6">
@@ -432,7 +516,10 @@ const ProductList = () => {
                   <React.Fragment key={category.id}>
                     <tr>
                       <td colSpan="5" className="p-4 bg-gray-100">
-                        <span id={category.id} className={`${category.color} text-white px-4 py-2 rounded-lg font-semibold text-lg`}>
+                        <span
+                          id={category.id}
+                          className={`${category.color} text-white px-4 py-2 rounded-lg font-semibold text-lg`}
+                        >
                           {category.name}
                         </span>
                       </td>
@@ -441,7 +528,9 @@ const ProductList = () => {
                       <ProductRow
                         key={`${category.id}-${index}`}
                         data={data}
-                        section={Object.keys(products).find(key => products[key] === category.data)}
+                        section={Object.keys(products).find(
+                          (key) => products[key] === category.data
+                        )}
                         index={index}
                       />
                     ))}
@@ -475,13 +564,18 @@ const ProductList = () => {
 
             {/* Contact Info */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Important Note</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">
+                Important Note
+              </h3>
               <div className="space-y-3 text-sm text-gray-600">
                 <p className="font-medium">
-                  "Once you register your products, our team will reach out to you via phone or WhatsApp."
+                  "Once you register your products, our team will reach out to
+                  you via phone or WhatsApp."
                 </p>
                 <div className="bg-blue-50 p-3 rounded-lg">
-                  <p className="font-bold text-blue-800">Support: +91-73732 68888</p>
+                  <p className="font-bold text-blue-800">
+                    Support: +91-73732 68888
+                  </p>
                 </div>
               </div>
             </div>
