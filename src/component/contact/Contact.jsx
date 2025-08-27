@@ -79,13 +79,13 @@ const Contact = () => {
       <div className="hidden">
         <img src={logo} alt="" />
       </div>
-      <div id="multi-sky-shot">
+      <div id="multi-sky-shot" className="hidden">
         <img src={img1} alt="" />
         <img src={img2} alt="" />
         <img src={img3} alt="" />
       </div>
 
-      <div >
+      <div className="hidden">
         <img src={img6} alt="" id="fancy-fountain-god-king" />
         <img src={img7} alt="" id="fancy-fountain-autumn" />
         <img src={img4} alt="" id="fancy-fountain-tri-color" />
