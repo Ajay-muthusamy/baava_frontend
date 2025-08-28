@@ -91,8 +91,8 @@ const Contact = () => {
         <img src={img6} alt="" id="fancy-fountain-god-king" />
         <img src={img7} alt="" id="fancy-fountain-autumn" />
         <img src={img4} alt="" id="fancy-fountain-tri-color" />
-      </div>
         <img src={img8} alt="" id="fancy-fountain-tri-color" />
+      </div>
 
 
     </div>

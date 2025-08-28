@@ -31,6 +31,8 @@ import PremiumUniqueSparklers from "../json/PremiumUniqueSparklers.json";
 import MatchBox from "../json/MatchBox.json";
 import PremiumRocket from "../json/PremiumRocket.json";
 import Bijili from "../json/biliji.json";
+import combopack from "../json/combopack.json";
+
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { BsChevronDown } from "react-icons/bs";
@@ -84,6 +86,7 @@ const ProductList = () => {
   };
 
   const [products, setProducts] = useState({
+    combopack: normalizeProducts(combopack),
     Bijili: normalizeProducts(Bijili),
     premiumOneSound: normalizeProducts(PremiumOneSound),
     oneSound: normalizeProducts(OneSound),
@@ -273,6 +276,12 @@ const ProductList = () => {
 
   // Product categories with their data and IDs
   const productCategories = [
+    {
+      id: "combo pack",
+      name: "COMBO PACK",
+      data: products.combopack,
+      color: "bg-blue-500",
+    },
     {
       id: "Bijili",
       name: "Bijili",
