@@ -7,6 +7,8 @@ import img3 from '../../assets/img/3.jpeg';
 import img4 from '../../assets/img/4.jpeg';
 import img6 from '../../assets/img/6.jpeg';
 import img7 from '../../assets/img/7.jpeg';
+import img8 from '../../assets/img/8.jpeg';
+
 
 const Contact = () => {
   return (
@@ -90,6 +92,7 @@ const Contact = () => {
         <img src={img7} alt="" id="fancy-fountain-autumn" />
         <img src={img4} alt="" id="fancy-fountain-tri-color" />
       </div>
+        <img src={img8} alt="" id="fancy-fountain-tri-color" />
 
 
     </div>
