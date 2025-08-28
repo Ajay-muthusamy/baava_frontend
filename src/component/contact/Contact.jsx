@@ -7,7 +7,7 @@ import img3 from '../../assets/img/3.jpeg';
 import img4 from '../../assets/img/4.jpeg';
 import img6 from '../../assets/img/6.jpeg';
 import img7 from '../../assets/img/7.jpeg';
-import img8 from '../../assets/img/8.jpeg';
+import img8 from '../../assets/img/8.jpg';
 
 
 const Contact = () => {
